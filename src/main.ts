@@ -41,6 +41,8 @@ async function main() {
         const token = core.getInput('token');
         const commits = github.context.payload.commits.filter((commit: Commit) => commit.distinct && isUpdateVersion(commit.message));
 
+        // test
+
         if(commits.length < 1) {
             return;
         }
